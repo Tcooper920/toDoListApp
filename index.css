@@ -1,0 +1,12 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.list-item {
+	display: flex;
+	max-width: 20rem;
+	padding: 1rem;
+	margin-bottom: .3rem;
+	background-color: lightgray;
+}

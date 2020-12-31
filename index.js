@@ -26,9 +26,9 @@ document.addEventListener("click", (event) => {
 		let listOfCancelButtons = document.getElementsByClassName("cancel-button");
 		let numberOfCancelButtons = listOfCancelButtons.length;
 
-		for (let i = 0; i < numberOfCancelButtons; i++) {
-			if (event.target.classList.contains(`cancel-button-item-id-${i + 1}`)) {
-				let thislistItem = document.getElementsByClassName(`list-item-id-${i + 1}`)[0];
+		for (let i = 0; i < numberOfCancelButtons + 1; i++) {
+			if (event.target.classList.contains(`cancel-button-item-id-${i}`)) {
+				let thislistItem = document.getElementsByClassName(`list-item-id-${i}`)[0];
 				thislistItem.classList.add("display-none");
 			}
 		}
@@ -41,9 +41,9 @@ document.addEventListener("click", (event) => {
 		let listOfCheckOffButtons = document.getElementsByClassName("check-off");
 		let numberOfCheckOffButtons = listOfCheckOffButtons.length;
 
-		for (let i = 0; i < numberOfCheckOffButtons; i++) {
-			if (event.target.classList.contains(`check-off-id-${i + 1}`)) {
-				let thisListItemName = document.getElementsByClassName(`list-item-name-id-${i + 1}`)[0];
+		for (let i = 0; i < numberOfCheckOffButtons + 1; i++) {
+			if (event.target.classList.contains(`check-off-id-${i}`)) {
+				let thisListItemName = document.getElementsByClassName(`list-item-name-id-${i}`)[0];
 				if (!thisListItemName.classList.contains("strike-through")) {
 					thisListItemName.classList.add("strike-through");
 				} else {

@@ -13,9 +13,9 @@ addButton.addEventListener("click", (event) => {
 	
 	listItemId += 1;
 	newListElement.classList.add(`list-item`, `list-item-id-${listItemId}`);
-	newListElement.innerHTML = `<div class="list-item-name list-item-name-id-${listItemId}">${currentTextFieldValue}</div> 
-								<div class="check-off check-off-id-${listItemId}">Check Off</div>
-								<div class="cancel-button cancel-button-item-id-${listItemId}">&times;</div>`;
+	newListElement.innerHTML = `<div class="list-item-name list-item-name-id-${listItemId}"><p>${currentTextFieldValue}</p></div> 
+								<button class="check-off check-off-id-${listItemId}">Check Off</button>
+								<button class="cancel-button cancel-button-item-id-${listItemId}">&times;</button>`;
 	toDoListElementsContainer.append(newListElement);
 	textField.value = "";
 });

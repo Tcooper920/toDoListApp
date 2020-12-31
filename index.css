@@ -14,13 +14,20 @@ main {
 	flex-direction: column;
 	max-width: 45rem;
 	margin: 0 auto;
-	padding: 1rem;
+	padding: 0 1rem 1rem 1rem;
 }
 
 form {
 	display: flex;
+	position: fixed;
+	padding: 1rem;
+	background-color: #50718c;
+	max-width: 45rem;
 	height: 2.5rem;
-	margin: .8rem 0 1rem 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	border-bottom: 1px solid #688ba7;
 }
 
 /* form field */
@@ -59,6 +66,10 @@ border-radius: 5px;
 	background-color: #8ab58a;
 }
 
+.to-do-list-elements {
+	margin-top: 5.5rem;
+}
+
 .list-item {
 	display: flex;
 	padding: 1rem;
@@ -86,7 +97,6 @@ border-radius: 5px;
 	text-align: right;
 	padding-right: 1rem;
 	color: #8ab58a;
-	font-weight: bold;
 }
 
 .check-off:hover {
@@ -119,6 +129,14 @@ border-radius: 500px;
 }
 
 .strike-through {
+	font-weight: bold;
 	color: #8ab58a;
 	text-decoration: line-through;
+}
+
+@media screen and (max-width: 700px) {
+	form {
+		box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+		border-bottom: 0;
+	}
 }

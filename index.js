@@ -44,11 +44,10 @@ document.addEventListener("click", (event) => {
 		for (let i = 0; i < numberOfCheckOffButtons + 1; i++) {
 			if (event.target.classList.contains(`check-off-id-${i}`)) {
 				let thisListItemName = document.getElementsByClassName(`list-item-name-id-${i}`)[0];
-				if (!thisListItemName.classList.contains("strike-through")) {
-					thisListItemName.classList.add("strike-through");
-				} else {
-					thisListItemName.classList.remove("strike-through");
-				}
+
+				(!thisListItemName.classList.contains("strike-through")) 
+					? (thisListItemName.classList.add("strike-through")) 
+					: (thisListItemName.classList.remove("strike-through"));
 			}
 		}
 	}

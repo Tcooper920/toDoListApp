@@ -35,3 +35,7 @@
 .display-none {
 	display: none;
 }
+
+.strike-through {
+	text-decoration: line-through;
+}

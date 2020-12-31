@@ -13,8 +13,8 @@ addButton.addEventListener("click", (event) => {
 	
 	listItemId += 1;
 	newListElement.classList.add(`list-item`, `list-item-id-${listItemId}`);
-	newListElement.innerHTML = `<div class="list-item-name">${currentTextFieldValue}</div> 
-								<div class="check-off">Check Off</div>
+	newListElement.innerHTML = `<div class="list-item-name list-item-name-id-${listItemId}">${currentTextFieldValue}</div> 
+								<div class="check-off check-off-id-${listItemId}">Check Off</div>
 								<div class="cancel-button cancel-button-item-id-${listItemId}">&times;</div>`;
 	toDoListElementsContainer.append(newListElement);
 	textField.value = "";
@@ -30,6 +30,25 @@ document.addEventListener("click", (event) => {
 			if (event.target.classList.contains(`cancel-button-item-id-${i + 1}`)) {
 				let thislistItem = document.getElementsByClassName(`list-item-id-${i + 1}`)[0];
 				thislistItem.classList.add("display-none");
+			}
+		}
+	}
+});
+
+//Strike through list item
+document.addEventListener("click", (event) => {
+	if (event.target.classList.contains("check-off")) {
+		let listOfCheckOffButtons = document.getElementsByClassName("check-off");
+		let numberOfCheckOffButtons = listOfCheckOffButtons.length;
+
+		for (let i = 0; i < numberOfCheckOffButtons; i++) {
+			if (event.target.classList.contains(`check-off-id-${i + 1}`)) {
+				let thisListItemName = document.getElementsByClassName(`list-item-name-id-${i + 1}`)[0];
+				if (!thisListItemName.classList.contains("strike-through")) {
+					thisListItemName.classList.add("strike-through");
+				} else {
+					thisListItemName.classList.remove("strike-through");
+				}
 			}
 		}
 	}

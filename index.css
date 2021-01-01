@@ -149,6 +149,24 @@ border-radius: 500px;
 	text-decoration: line-through;
 }
 
+.error-message {
+	display: flex;
+	position: fixed;
+	z-index: 1;
+	top: -4rem;
+	background-color: #f96363;
+	color: white;
+	width: 100%;
+	justify-content: center;
+	padding: .5rem 0 .5rem 0;
+	border-bottom: 1px solid #de5a5a;
+	transition: top .35s ease-in-out;
+}
+
+.display-error-message {
+	top: 0;
+}
+
 @media screen and (max-width: 700px) {
 	form {
 		box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);

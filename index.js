@@ -42,8 +42,12 @@ document.addEventListener("click", (event) => {
 
 		for (let i = 0; i < numberOfCancelButtons + 1; i++) {
 			if (event.target.classList.contains(`cancel-button-item-id-${i}`)) {
-				let thislistItem = document.getElementsByClassName(`list-item-id-${i}`)[0];
-				thislistItem.classList.add("display-none");
+				let thisListItem = document.getElementsByClassName(`list-item-id-${i}`)[0];
+				
+				thisListItem.classList.add("fade-out");
+				setTimeout(() => {
+					thisListItem.classList.add("display-none");
+				}, 400);
 			}
 		}
 	}

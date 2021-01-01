@@ -90,6 +90,8 @@ border-radius: 5px;
 	align-items: center;
 	color: #505050;
 	background-color: #f8fcff;
+	opacity: 1;
+	transition: opacity .4s linear;
 	-webkit-border-radius: 5px;
 -moz-border-radius: 5px;
 border-radius: 5px;
@@ -141,6 +143,10 @@ border-radius: 500px;
 
 .display-none {
 	display: none;
+}
+
+.fade-out {
+	opacity: 0;
 }
 
 .strike-through {

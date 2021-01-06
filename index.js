@@ -1,6 +1,7 @@
 
 const toDoListElementsContainer = document.getElementsByClassName("to-do-list-elements")[0];
 const addButton = document.getElementsByClassName("add-button")[0];
+const clearButton = document.getElementsByClassName("clear-button")[0];
 const errorMessage = document.getElementsByClassName("error-message")[0];
 let listItemId = 0;
 
@@ -23,6 +24,16 @@ addButton.addEventListener("click", (event) => {
 		toDoListElementsContainer.append(newListElement);
 		textField.value = "";
 	}
+});
+
+// Clear text field
+clearButton.addEventListener("click", (event) => {
+	event.preventDefault();
+
+	let textField = document.getElementsByClassName("list-item-text")[0];
+
+	textField.value = "";
+
 });
 
 // Error message
@@ -53,7 +64,7 @@ document.addEventListener("click", (event) => {
 	}
 });
 
-//Strike through list item
+// Strike through list item
 document.addEventListener("click", (event) => {
 	if (event.target.classList.contains("check-off")) {
 		let listOfCheckOffButtons = document.getElementsByClassName("check-off");

@@ -24,7 +24,17 @@ addButton.addEventListener("click", (event) => {
 		toDoListElementsContainer.append(newListElement);
 		textField.value = "";
 	}
+	sortListItems();
 });
+
+// Sort list items by alphabetical order
+const sortListItems = () => {
+	let list = document.querySelector(".to-do-list-elements");
+
+	[...list.children]
+		.sort((a,b) => a.innerText > b.innerText ? 1 : -1)
+		.forEach(node => list.appendChild(node));
+}
 
 // Clear text field
 clearButton.addEventListener("click", (event) => {
